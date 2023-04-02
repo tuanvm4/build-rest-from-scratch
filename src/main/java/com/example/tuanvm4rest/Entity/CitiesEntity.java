@@ -6,13 +6,12 @@ import jakarta.persistence.*;
 @Table(name = "cities", schema = "public", catalog = "postgres")
 public class CitiesEntity {
     @Basic
+    @Id
     @Column(name = "name")
     private String name;
     @Basic
     @Column(name = "location")
-    private Object location;
-    @Id
-    private Long id;
+    private String location;
 
     public String getName() {
         return name;
@@ -22,11 +21,11 @@ public class CitiesEntity {
         this.name = name;
     }
 
-    public Object getLocation() {
+    public String getLocation() {
         return location;
     }
 
-    public void setLocation(Object location) {
+    public void setLocation(String location) {
         this.location = location;
     }
 
@@ -48,13 +47,5 @@ public class CitiesEntity {
         int result = name != null ? name.hashCode() : 0;
         result = 31 * result + (location != null ? location.hashCode() : 0);
         return result;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getId() {
-        return id;
     }
 }

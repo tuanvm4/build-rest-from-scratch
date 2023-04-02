@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface Weather extends JpaRepository<WeatherEntity, Integer> {
-    @Query(value = "select * from weather where city =?", nativeQuery = true)
+    @Query(value = "select * from weather where city like %?1%", nativeQuery = true)
     List<WeatherEntity> getByCity(String city);
 }

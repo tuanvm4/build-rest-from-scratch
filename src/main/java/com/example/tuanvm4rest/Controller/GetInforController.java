@@ -4,6 +4,7 @@ import com.example.tuanvm4rest.Entity.CitiesEntity;
 import com.example.tuanvm4rest.Entity.WeatherEntity;
 import com.example.tuanvm4rest.Repository.Cities;
 import com.example.tuanvm4rest.Repository.Weather;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,11 +15,12 @@ import java.util.List;
 
 @RestController
 @Slf4j
+@RequiredArgsConstructor
 public class GetInforController {
    @Autowired
     private Weather weather;
 //    @Autowired
-    private  Cities cities;
+    private final  Cities cities;
 
     @GetMapping("/get-weather-by-city")
     public List<WeatherEntity> getByName(String cityName) {

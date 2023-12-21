@@ -42,27 +42,4 @@ public class GetInforController {
             log.error("This method exception {}", e.getMessage());
         }
     }
-
-//    public void addPermission(final TypePermission permission) {
-//        if (permission.equals(NoTypePermission.NONE) || permission.equals(AnyTypePermission.ANY))
-//            permissions.clear();
-//        permissions.add(0, permission);
-//    }
-//
-//    public Class realClass(final String elementName) {
-//        final Class type = super.realClass(elementName);
-//        for (int i = 0; i < permissions.size(); ++i) {
-//            final TypePermission permission = (TypePermission)permissions.get(i);
-//            if (permission.allows(type))
-//                return type;
-//        }
-//        throw new ForbiddenClassException(type);
-//    }
-//
-//    public void addPermission(final TypePermission permission) {
-//        if (permission.equals(NoTypePermission.NONE) || permission.equals(AnyTypePermission.ANY))
-//            permissions.clear();
-//        permission.add(0,permission)
-//    }
-
 }

@@ -12,7 +12,7 @@ import java.sql.Date;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor(force = true)
-@Table(name = "weather", schema = "public", catalog = "postgres")
+@Table(name = "weather", schema = "tuanvm_application", catalog = "develop")
 public class WeatherEntity {
     @Basic
     @Id

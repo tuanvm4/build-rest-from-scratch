@@ -16,14 +16,5 @@ pipeline {
                 }
             }
         }
-
-        stage('Deploy') {
-            steps {
-                script {
-                    // Your deployment commands
-                    // (e.g., deploy to a test environment)
-                }
-            }
-        }
     }
 }

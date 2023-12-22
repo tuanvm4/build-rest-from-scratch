@@ -4,12 +4,6 @@ pipeline {
         maven 'Maven3'
     }
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-
         stage('Build') {
             steps {
                 script {

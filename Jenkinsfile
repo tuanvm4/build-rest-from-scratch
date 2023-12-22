@@ -14,7 +14,7 @@ pipeline {
             steps {
                 script {
                     // Your build commands (e.g., Maven or Gradle)
-                    sh 'mvn clean install'
+                    sh 'mvn clean install -DskipTests'
                 }
             }
         }

@@ -14,7 +14,7 @@ import java.util.Objects;
 
 @Entity
 @Data
-@Table(name = "customer_name", schema = "tuanvm_application", catalog = "develop")
+@Table(name = "customer_name", schema = "develop", catalog = "develop")
 public class CustomerNameEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
